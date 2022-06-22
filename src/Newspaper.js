@@ -1,20 +1,12 @@
-class Newspaper {
-  constructor(title) {
-    this.title = title
-    this.onLoan = false
-  }
+const LibraryRental = require("./LibraryRental");
 
-  isOnLoan() {
-    return this.onLoan
-  }
-
+class Newspaper extends LibraryRental {
   checkIn() {
-    throw new Error('newspapers are not available for loan')
+    throw new Error("newspapers are not available for loan");
   }
-
   checkOut() {
-    throw new Error('newspapers are not available for loan')
+    throw new Error("newspapers are not available for loan");
   }
 }
 
-module.exports = Newspaper
+module.exports = Newspaper;
